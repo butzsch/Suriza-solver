@@ -1,0 +1,19 @@
+[package]
+name = "suriza"
+version = "0.1.0"
+authors = ["Christian Pech <butzschered@gmail.com>"]
+publish = false
+
+[lib]
+name = "suriza"
+crate-type = ["cdylib"]
+
+[dependencies]
+boolinator = "2.4.0"
+itertools = "0.7.8"
+pyo3 = { version = "0.4.1", features = ["extension-module"]}
+serialport = "3.0.0"
+
+[dev-dependencies]
+hamcrest = "*"
+unindent = "0.1.3"
