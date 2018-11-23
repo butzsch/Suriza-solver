@@ -36,7 +36,7 @@ grbl = libsuriza.GRBL('/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0')
 
 image = capture_image()
 undistorted = without_fisheye(image.copy())
-excerpt = undistorted[215:525, 200:800]
+excerpt = undistorted[240:550, 200:800]
 
 CELL_COUNT = 7
 INTERSECTION_COUNT = CELL_COUNT + 1
@@ -89,7 +89,7 @@ def detect_digits():
     
 grid = detect_digits()
 
-START_X, START_Y = 55, 131
+START_X, START_Y = 56.5, 130.5
 grbl.seek_to(START_X, START_Y)
 time.sleep(1)
 
